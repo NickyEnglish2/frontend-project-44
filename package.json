@@ -1,0 +1,44 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Brain-games",
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickyEnglish2/frontend-project-44.git"
+  },
+  "keywords": [
+    "hexlet",
+    "brain",
+    "games"
+  ],
+  "author": "NickyEnglish2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickyEnglish2/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/NickyEnglish2/frontend-project-44#readme",
+  "dependencies": {
+    "brain-even": "^0.1.12",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.0.0",
+    "@eslint/js": "^9.8.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.9.0"
+  }
+}
