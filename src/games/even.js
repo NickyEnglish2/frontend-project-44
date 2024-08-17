@@ -1,12 +1,11 @@
 import randomNumber from '../randomnumber.js';
-import getAnswer from '../getanswer.js';
 
 const isEven = (num) => num % 2 === 0;
 
 const generateQuestionsForEven = () => {
   const num1 = randomNumber();
 
-  const answer = getAnswer(isEven(num1));
+  const answer = isEven(num1) ? 'yes' : 'no';
 
   return [num1, answer];
 };

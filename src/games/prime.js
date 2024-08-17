@@ -1,5 +1,4 @@
 import randomNumber from '../randomnumber.js';
-import getAnswer from '../getanswer.js';
 
 const isPrime = (num6) => {
   if (num6 <= 1) {
@@ -18,7 +17,7 @@ const isPrime = (num6) => {
 const generateQuestionsForPrimeNumber = () => {
   const primeNumber = randomNumber();
 
-  const correctAnswer = getAnswer(isPrime(primeNumber));
+  const correctAnswer = isPrime(primeNumber) ? 'yes' : 'no';
 
   return [primeNumber, correctAnswer];
 };
