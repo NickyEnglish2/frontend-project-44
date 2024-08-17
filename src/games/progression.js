@@ -10,7 +10,7 @@ const generateQuestionsForBrainProgression = () => {
     result.push(startingNumber + i * progressionNumber);
   }
 
-  const extortionIndex = Math.floor(Math.random() * result.length);
+  const extortionIndex = randomNumber(0, result.length - 1);
 
   const correctAnswer = result[extortionIndex];
 

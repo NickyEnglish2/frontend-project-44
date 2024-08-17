@@ -5,7 +5,7 @@ const generateQuestionsForCalculator = () => {
   const number2 = randomNumber();
 
   const operations = ['+', '-', '*'];
-  const whichOperator = operations[Math.floor(Math.random() * operations.length)];
+  const whichOperator = operations[randomNumber(0, operations.length - 1)];
 
   let answer = 0;
   switch (whichOperator) {
