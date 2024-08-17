@@ -7,7 +7,8 @@ const playGame = (gameDescription, generatedQuestionAndAnswer) => {
 
   console.log(gameDescription);
 
-  for (let i = 1; i <= 3; i += 1) {
+  const roundsCount = 3;
+  for (let i = 1; i <= roundsCount; i += 1) {
     const [question, correctAnswer] = generatedQuestionAndAnswer();
 
     console.log(`Question: ${question}`);
