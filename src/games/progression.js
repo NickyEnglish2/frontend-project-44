@@ -1,6 +1,6 @@
 import randomNumber from '../randomnumber.js';
 
-const generateQuestionsForBrainProgression = () => {
+const generateProgression = () => {
   const startingNumber = randomNumber();
   const progressionNumber = randomNumber(1, 10);
 
@@ -10,13 +10,19 @@ const generateQuestionsForBrainProgression = () => {
     result.push(startingNumber + i * progressionNumber);
   }
 
-  const extortionIndex = randomNumber(0, result.length - 1);
+  return result;
+};
 
-  const correctAnswer = result[extortionIndex];
+const generateQuestionsForBrainProgression = () => {
+  const progressionArray = generateProgression();
 
-  result[extortionIndex] = '..';
+  const extortionIndex = randomNumber(0, progressionArray.length - 1);
 
-  return [result.join(' '), correctAnswer.toString()];
+  const correctAnswer = progressionArray[extortionIndex];
+
+  progressionArray[extortionIndex] = '..';
+
+  return [progressionArray.join(' '), correctAnswer.toString()];
 };
 
 export default generateQuestionsForBrainProgression;

@@ -1,14 +1,15 @@
 import randomNumber from '../randomnumber.js';
 
-const generateQuestionsForCalculator = () => {
-  const number1 = randomNumber();
-  const number2 = randomNumber();
-
+const whichOperator = () => {
   const operations = ['+', '-', '*'];
-  const whichOperator = operations[randomNumber(0, operations.length - 1)];
+  const operatorToChoose = operations[randomNumber(0, operations.length - 1)];
 
+  return operatorToChoose;
+};
+
+const calcAnswer = (number1, number2, operator) => {
   let answer = 0;
-  switch (whichOperator) {
+  switch (operator) {
     case '+':
       answer = number1 + number2;
       break;
@@ -21,9 +22,18 @@ const generateQuestionsForCalculator = () => {
     default:
   }
 
-  const question = `${number1} ${whichOperator} ${number2}`;
+  return answer;
+};
 
-  return [question, answer.toString()];
+const generateQuestionsForCalculator = () => {
+  const numb1 = randomNumber();
+  const numb2 = randomNumber();
+  const rightOperator = whichOperator();
+
+  const answerForCalcGame = calcAnswer(numb1, numb2, rightOperator);
+  const question = `${numb1} ${rightOperator} ${numb2}`;
+
+  return [question, answerForCalcGame.toString()];
 };
 
 export default generateQuestionsForCalculator;
