@@ -1,4 +1,5 @@
 import randomNumber from '../randomnumber.js';
+import playGame from '../index.js';
 
 const whichOperator = () => {
   const operations = ['+', '-', '*'];
@@ -36,4 +37,8 @@ const generateQuestionsForCalculator = () => {
   return [question, answerForCalcGame.toString()];
 };
 
-export default generateQuestionsForCalculator;
+const launchBrainCalc = () => {
+  playGame('What is the result of the expression?', generateQuestionsForCalculator);
+};
+
+export default launchBrainCalc;
