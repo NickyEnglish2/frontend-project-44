@@ -6,4 +6,9 @@ const greetingUser = () => {
   return userName;
 };
 
-export default greetingUser;
+const launchBrainGame = () => {
+  const playerName = greetingUser();
+  console.log(`Hello, ${playerName}!`);
+};
+
+export { greetingUser, launchBrainGame };
