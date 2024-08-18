@@ -1,4 +1,5 @@
 import randomNumber from '../randomnumber.js';
+import playGame from '../index.js';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -10,4 +11,8 @@ const generateQuestionsForEven = () => {
   return [num1, answer];
 };
 
-export default generateQuestionsForEven;
+const launchBrainEven = () => {
+  playGame('Answer "yes" if the number is even, otherwise answer "no".', generateQuestionsForEven);
+};
+
+export default launchBrainEven;
