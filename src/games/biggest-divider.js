@@ -1,4 +1,5 @@
 import randomNumber from '../randomnumber.js';
+import playGame from '../index.js';
 
 const gcd = (a, b) => {
   let x = a;
@@ -21,4 +22,8 @@ const generateQuestionsForGCD = () => {
   return [gcdQuestion, gcdAnswer.toString()];
 };
 
-export default generateQuestionsForGCD;
+const launchBrainGCD = () => {
+  playGame('Find the greatest common divisor of given numbers.', generateQuestionsForGCD);
+};
+
+export default launchBrainGCD;
