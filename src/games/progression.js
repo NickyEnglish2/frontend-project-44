@@ -1,4 +1,5 @@
 import randomNumber from '../randomnumber.js';
+import playGame from '../index.js';
 
 const generateProgression = () => {
   const startingNumber = randomNumber();
@@ -25,4 +26,8 @@ const generateQuestionsForBrainProgression = () => {
   return [progressionArray.join(' '), correctAnswer.toString()];
 };
 
-export default generateQuestionsForBrainProgression;
+const launchBrainProgression = () => {
+  playGame('What number is missing in the progression?', generateQuestionsForBrainProgression);
+};
+
+export default launchBrainProgression;
