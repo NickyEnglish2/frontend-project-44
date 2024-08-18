@@ -1,4 +1,5 @@
 import randomNumber from '../randomnumber.js';
+import playGame from '../index.js';
 
 const isPrime = (num6) => {
   if (num6 <= 1) {
@@ -22,4 +23,8 @@ const generateQuestionsForPrimeNumber = () => {
   return [primeNumber, correctAnswer];
 };
 
-export default generateQuestionsForPrimeNumber;
+const launchBrainPrime = () => {
+  playGame('Answer "yes" if given number is prime. Otherwise answer "no".', generateQuestionsForPrimeNumber);
+};
+
+export default launchBrainPrime;
