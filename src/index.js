@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
-import { greetingUser } from './cli.js';
 
 const playGame = (gameDescription, generatedQuestionAndAnswer) => {
-  const playerName = greetingUser();
-  console.log(`Hello, ${playerName}!`);
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
 
   console.log(gameDescription);
 
@@ -16,14 +16,14 @@ const playGame = (gameDescription, generatedQuestionAndAnswer) => {
 
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${playerName}!`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
 
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${playerName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default playGame;
