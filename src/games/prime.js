@@ -1,13 +1,13 @@
 import randomNumber from '../randomnumber.js';
 import playGame from '../index.js';
 
-const isPrime = (num6) => {
-  if (num6 <= 1) {
+const isPrime = (num) => {
+  if (num <= 1) {
     return false;
   }
 
-  for (let i = 2; i <= Math.sqrt(num6); i += 1) {
-    if (num6 % i === 0) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
       return false;
     }
   }

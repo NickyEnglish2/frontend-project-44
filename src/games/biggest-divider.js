@@ -13,11 +13,11 @@ const gcd = (a, b) => {
 };
 
 const generateQuestionsForGCD = () => {
+  const num1 = randomNumber();
   const num2 = randomNumber();
-  const num3 = randomNumber();
 
-  const gcdAnswer = gcd(num2, num3);
-  const gcdQuestion = `${num2} ${num3}`;
+  const gcdAnswer = gcd(num1, num2);
+  const gcdQuestion = `${num1} ${num2}`;
 
   return [gcdQuestion, gcdAnswer.toString()];
 };

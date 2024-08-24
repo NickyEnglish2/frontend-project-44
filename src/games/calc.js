@@ -27,12 +27,12 @@ const calcAnswer = (number1, number2, operator) => {
 };
 
 const generateQuestionsForCalculator = () => {
-  const numb1 = randomNumber();
-  const numb2 = randomNumber();
+  const num1 = randomNumber();
+  const num2 = randomNumber();
   const rightOperator = whichOperator();
 
-  const answerForCalcGame = calcAnswer(numb1, numb2, rightOperator);
-  const question = `${numb1} ${rightOperator} ${numb2}`;
+  const answerForCalcGame = calcAnswer(num1, num2, rightOperator);
+  const question = `${num1} ${rightOperator} ${num2}`;
 
   return [question, answerForCalcGame.toString()];
 };

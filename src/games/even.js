@@ -4,11 +4,11 @@ import playGame from '../index.js';
 const isEven = (num) => num % 2 === 0;
 
 const generateQuestionsForEven = () => {
-  const num1 = randomNumber();
+  const num = randomNumber();
 
-  const answer = isEven(num1) ? 'yes' : 'no';
+  const answer = isEven(num) ? 'yes' : 'no';
 
-  return [num1, answer];
+  return [num, answer];
 };
 
 const launchBrainEven = () => {
