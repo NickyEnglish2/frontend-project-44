@@ -1,13 +1,6 @@
 import randomNumber from '../randomnumber.js';
 import playGame from '../index.js';
 
-const whichOperator = () => {
-  const operations = ['+', '-', '*'];
-  const operatorToChoose = operations[randomNumber(0, operations.length - 1)];
-
-  return operatorToChoose;
-};
-
 const calcAnswer = (number1, number2, operator) => {
   let answer = 0;
   switch (operator) {
@@ -29,10 +22,12 @@ const calcAnswer = (number1, number2, operator) => {
 const generateQuestionsForCalculator = () => {
   const num1 = randomNumber();
   const num2 = randomNumber();
-  const rightOperator = whichOperator();
 
-  const answerForCalcGame = calcAnswer(num1, num2, rightOperator);
-  const question = `${num1} ${rightOperator} ${num2}`;
+  const operations = ['+', '-', '*'];
+  const operatorToChoose = operations[randomNumber(0, operations.length - 1)];
+
+  const answerForCalcGame = calcAnswer(num1, num2, operatorToChoose);
+  const question = `${num1} ${operatorToChoose} ${num2}`;
 
   return [question, answerForCalcGame.toString()];
 };
