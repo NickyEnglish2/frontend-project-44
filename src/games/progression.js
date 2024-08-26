@@ -1,21 +1,21 @@
 import randomNumber from '../randomnumber.js';
 import playGame from '../index.js';
 
-const generateProgression = () => {
-  const startingNumber = randomNumber();
-  const progressionNumber = randomNumber(1, 10);
-
+const generateProgression = (startNum, progressNum) => {
   const result = [];
 
   for (let i = 0; i < 10; i += 1) {
-    result.push(startingNumber + i * progressionNumber);
+    result.push(startNum + i * progressNum);
   }
 
   return result;
 };
 
 const generateQuestionsForBrainProgression = () => {
-  const progressionArray = generateProgression();
+  const num1 = randomNumber();
+  const num2 = randomNumber(1, 10);
+
+  const progressionArray = generateProgression(num1, num2);
 
   const extortionIndex = randomNumber(0, progressionArray.length - 1);
 
